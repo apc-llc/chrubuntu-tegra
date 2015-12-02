@@ -15,14 +15,14 @@ sudo chromeos-firmwareupdate --mode=todev
 3. Download and execute the Chrubuntu installation script
 
 ```
-wget https://goo.gl/i6ZjBV chrubuntu-tegra.sh
+wget https://goo.gl/i6ZjBV -O chrubuntu-tegra.sh
 sudo bash ./chrubuntu-tegra.sh default lts
 ```
 
 4. Redownload and re-run Chrubuntu instllation script after reboot
 
 ```
-wget https://goo.gl/i6ZjBV chrubuntu-tegra.sh
+wget https://goo.gl/i6ZjBV -O chrubuntu-tegra.sh
 sudo bash ./chrubuntu-tegra.sh default lts
 ```
 
@@ -46,3 +46,8 @@ sudo apt-get install gparted
 gparted
 ```
 
+6. Downgrade Chrubuntu Linux kernel, as CUDA support has been removed from actual one (only basic samples can work, e.g. deviceQuery)
+
+```
+./cuda-kernel-fix.sh
+```
