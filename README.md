@@ -29,7 +29,7 @@ sudo bash ./chrubuntu-tegra.sh default lts
 5. After successfully entering Chrubuntu, reboot into ChromeOS and set Chrubuntu as permanent primary boot option:
 
 ```
-sudo cgpt add -i 6 -P 5 -S 1
+sudo cgpt add -i 6 -P 5 -S 1 /dev/mmcblk0
 ```
 
 To switch back the primary boot option to ChromeOS while in ChrUbuntu:
